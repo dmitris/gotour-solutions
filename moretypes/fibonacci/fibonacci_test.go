@@ -1,6 +1,8 @@
 package fibonacci
 
-import "testing"
+import (
+	"testing"
+)
 
 // https://en.wikipedia.org/wiki/Fibonacci_sequence
 func TestFibonacci(t *testing.T) {
@@ -27,7 +29,7 @@ func TestFibonacci(t *testing.T) {
 			fib = f()
 		}
 		if fib != tt.want {
-			t.Errorf("input %d, got %d, want %d", tt.inp, fib, tt.want)
+			t.Errorf("fibonacci: input %d, got %d, want %d", tt.inp, fib, tt.want)
 		}
 	}
 }

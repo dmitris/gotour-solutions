@@ -8,7 +8,7 @@ import (
 
 func main() {
 	f := fibonacci.Fibonacci()
-	for i := 0; i < 10; i++ {
-		fmt.Printf("%d: %d\n", i, f())
+	for i := 0; i < 15; i++ {
+		fmt.Printf("%2d: %3d\n", i, f())
 	}
 }
