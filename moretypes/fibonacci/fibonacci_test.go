@@ -4,7 +4,6 @@ import (
 	"testing"
 )
 
-// https://en.wikipedia.org/wiki/Fibonacci_sequence
 func TestFibonacci(t *testing.T) {
 	tests := []struct {
 		inp, want int
