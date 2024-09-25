@@ -50,6 +50,7 @@ func TestCrawlResults(t *testing.T) {
 		},
 	}
 	for _, tt := range tests {
+		// Table-driven tests using subtests https://go.dev/blog/subtests#table-driven-tests-using-subtests
 		t.Run(tt.Name, func(t *testing.T) {
 			results := CrawlResults(tt.URL, 4, fetcher)
 			slices.SortFunc(results, compareCrawlResults)
