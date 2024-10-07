@@ -24,7 +24,7 @@ func (c *CrawlResult) String() string {
 	return fmt.Sprintf("Body: %s, URLs: [%s], Err: %v", c.Body, strings.Join(c.URLs, ", "), c.Err)
 }
 
-// MapWithMutex combines a map[string]bool and a mutex to synchronise access.
+// MapWithMutex combines a map[string]bool and a mutex to synchronize access.
 type MapWithMutex struct {
 	M  map[string]bool
 	mu *sync.Mutex
