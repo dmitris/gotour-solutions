@@ -30,7 +30,7 @@ func walk(t *tree.Tree, ch chan int) {
 // Same determines whether the trees t1 and t2
 // contain the same values. It calls Walk,
 // collects the values from the channels filled by
-// Walk into slilces and compares the slices for equality.
+// Walk into slices and compares the slices for equality.
 func Same(t1, t2 *tree.Tree) bool {
 	ch1 := make(chan int)
 	ch2 := make(chan int)
@@ -40,6 +40,7 @@ func Same(t1, t2 *tree.Tree) bool {
 	s2 := collectChannel(ch2)
 	return slices.Equal(s1, s2)
 }
+
 func main() {
 	t1, t2 := tree.New(5), tree.New(5)
 	t3, t4 := tree.New(3), tree.New(4)
